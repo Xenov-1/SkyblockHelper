@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="3dp"
+    android:background="@drawable/layout_bg">
+
+    <TextView
+        android:id="@+id/mayor_perks_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:fontFamily="@font/bariol_bold"
+        android:text="Unknown mayor perks"
+        android:textColor="#bfa300"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/mayor_perks2"
+        android:layout_below="@id/mayor_perks_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        android:gravity="left"
+        android:text="Nothing to show here."
+        android:fontFamily="@font/bariol_bold"
+        android:textSize="17sp"
+        android:layout_centerVertical="true"
+        android:textStyle="bold"
+        tools:ignore="RtlHardcoded" />
+    <TextView
+        android:id="@+id/remaining_time"
+        android:layout_below="@id/mayor_perks2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="25dp"
+        android:gravity="left"
+        android:text=""
+        android:fontFamily="@font/bariol_bold"
+        android:textSize="17sp"
+        android:textColor="#d66c4f"
+        android:layout_centerVertical="true"
+        android:textStyle="bold"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/dismiss_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/remaining_time"
+        android:backgroundTint="@color/design_default_color_secondary"
+        android:paddingHorizontal="30dp"
+        android:text="@string/dismiss" />
+
+</RelativeLayout>
+
+

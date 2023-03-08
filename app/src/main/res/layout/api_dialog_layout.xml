@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="3dp"
+    android:background="@drawable/layout_bg">
+
+    <TextView
+        android:id="@+id/input_api_here"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="@font/bariol_bold"
+        android:gravity="center"
+        android:text="@string/put_your_api_below"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/api_key_input"
+        android:fontFamily="@font/bariol_bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/input_api_here"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#30ffffff"
+        android:drawableStart="@drawable/baseline_key_24"
+        android:drawablePadding="20dp"
+        android:windowSoftInputMode="stateVisible"
+        android:hint="@string/aaaa1111_bb22_cc33_dd44_eeeeee555555"
+        android:imeOptions="actionDone"
+        android:importantForAutofill="no"
+        android:inputType="textVisiblePassword"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-"
+        android:padding="20dp"
+        android:maxLength="36"
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textColorHint="#30ffffff"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_below="@id/api_key_input"
+        android:weightSum="2"
+        android:layout_margin="10dp">
+
+        <Button
+            android:id="@+id/dismiss_button"
+            android:layout_weight="1"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/design_default_color_secondary"
+            android:paddingHorizontal="30dp"
+            android:fontFamily="@font/bariol_bold"
+            android:text="@string/dismiss" />
+
+        <Button
+            android:id="@+id/set_button"
+            android:layout_weight="1"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@id/dismiss_button"
+            android:backgroundTint="@color/design_default_color_secondary"
+            android:paddingHorizontal="30dp"
+            android:fontFamily="@font/bariol_bold"
+            android:text="@string/set_api" />
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>
+
+

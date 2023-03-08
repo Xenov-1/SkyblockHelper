@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Skyblock</string>
+    <string name="put_your_api_below">Put your API below.</string>
+    <string name="aaaa1111_bb22_cc33_dd44_eeeeee555555">aaaa1111-bb22-cc33-dd44-eeeeee555555</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="set_api">Set API</string>
+    <string name="input_your_api_key">Input your API key</string>
+    <string name="submit">SUBMIT</string>
+    <string name="update">update</string>
+    <string name="set_api_key">Set API key</string>
+    <string name="check_hypixel_skyblock_data">Check Hypixel Skyblock Data.</string>
+    <string name="unknown">Unknown</string>
+    <string name="current_mayor">Current Mayor</string>
+    <string name="next_mayor">Next Mayor</string>
+</resources>

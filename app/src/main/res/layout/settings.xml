@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/test"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity"
+    android:orientation="horizontal"
+    android:background="#ffba60">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/DataScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                app:layout_constraintTop_toTopOf="parent"
+
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+
+
+                android:weightSum="100">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/go_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:background="@android:color/transparent"
+                    app:icon="@drawable/baseline_arrow_back_ios_24"
+                    app:iconTint="@color/black"
+                    android:fontFamily="@font/bariol_bold"
+                    android:text="Go Back"
+                    />
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/api_setting"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/details">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+
+                        app:cardUseCompatPadding="true"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?selectableItemBackground"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:gravity="center">
+
+
+
+                            <TextView
+                                android:id="@+id/text1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/normalPadding"
+                                android:layout_marginTop="5sp"
+                                android:layout_marginRight="@dimen/normalPadding"
+
+
+                                android:fontFamily="@font/bariol_bold"
+                                android:text="Set API key"
+                                android:textColor="@color/darkTextColor"
+                                android:textSize="@dimen/title"
+                                tools:ignore="SpUsage,TextSizeCheck" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/normalPadding"
+                                android:layout_marginBottom="5sp"
+
+
+                                android:layout_below="@id/text1"
+
+                                android:fontFamily="@font/bariol_bold"
+
+                                android:text="API key is needed for app to work."
+                                android:textColor="#90212121"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/api_key_set"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginRight="10sp"
+
+                                android:backgroundTint="@color/colorPrimaryDark"
+                                android:fontFamily="@font/bariol_bold"
+                                android:gravity="center"
+                                android:text="API"
+                                android:textColor="@color/white"
+                                app:icon="@drawable/baseline_key_24"
+                                app:iconTint="@color/white" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/api_setting">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/MayorGrid"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardUseCompatPadding="true">
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/current_mayor"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+
+                        app:cardUseCompatPadding="true"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?selectableItemBackground"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:gravity="center">
+
+
+
+                            <TextView
+                                android:id="@+id/text2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/normalPadding"
+                                android:layout_marginTop="5sp"
+                                android:layout_marginRight="@dimen/normalPadding"
+
+
+                                android:fontFamily="@font/bariol_bold"
+                                android:text="Set Username"
+                                android:textColor="@color/darkTextColor"
+                                android:textSize="@dimen/title"
+                                tools:ignore="SpUsage,TextSizeCheck" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/normalPadding"
+                                android:layout_marginBottom="5sp"
+
+
+                                android:layout_below="@id/text2"
+
+                                android:fontFamily="@font/bariol_bold"
+
+                                android:text="Username is needed for auctions."
+                                android:textColor="#90212121"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/username_set"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginRight="10sp"
+
+                                android:backgroundTint="@color/colorPrimaryDark"
+                                android:fontFamily="@font/bariol_bold"
+                                android:gravity="center"
+                                android:text="Name"
+                                android:textColor="@color/white"
+                                app:icon="@drawable/baseline_perm_identity_24"
+                                app:iconTint="@color/white" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/auction_notification"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/username">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+
+                        app:cardUseCompatPadding="true"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?selectableItemBackground"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:gravity="center">
+
+
+
+                            <TextView
+                                android:id="@+id/text3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/normalPadding"
+                                android:layout_marginTop="5sp"
+                                android:layout_marginRight="@dimen/normalPadding"
+
+
+                                android:fontFamily="@font/bariol_bold"
+                                android:text="Auction Status"
+                                android:textColor="@color/darkTextColor"
+                                android:textSize="@dimen/title"
+                                tools:ignore="SpUsage,TextSizeCheck" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/normalPadding"
+                                android:layout_marginBottom="5sp"
+
+
+                                android:layout_below="@id/text3"
+
+                                android:fontFamily="@font/bariol_bold"
+
+                                android:text="Shows status of unclaimed auctions."
+                                android:textColor="#90212121"
+                                android:textSize="12sp" />
+
+                            <androidx.appcompat.widget.AppCompatToggleButton
+                                android:id="@+id/auction_toggle"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+
+                                android:layout_centerInParent="true"
+                                android:layout_marginRight="10sp"
+                                android:backgroundTint="@color/colorPrimaryDark"
+                                android:checked="true"
+                                android:fontFamily="@font/bariol_bold"
+                                android:gravity="center"
+                                android:text="API"
+                                android:textColor="@color/white"
+                                app:icon="@drawable/baseline_key_24"
+                                app:iconTint="@color/white" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/fetchur_today"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/auction_notification">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+
+                        app:cardUseCompatPadding="true"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?selectableItemBackground"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:gravity="center">
+
+
+
+                            <TextView
+                                android:id="@+id/fetchurText1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/normalPadding"
+                                android:layout_marginTop="5sp"
+                                android:layout_marginRight="@dimen/normalPadding"
+
+
+                                android:fontFamily="@font/bariol_bold"
+                                android:text="Fetchur Today"
+                                android:textColor="@color/darkTextColor"
+                                android:textSize="@dimen/title"
+                                tools:ignore="SpUsage,TextSizeCheck" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/normalPadding"
+                                android:layout_marginBottom="5sp"
+
+
+                                android:layout_below="@id/fetchurText1"
+
+                                android:fontFamily="@font/bariol_bold"
+
+                                android:text="Shows Fetchur's todays demmand."
+                                android:textColor="#90212121"
+                                android:textSize="12sp"
+                                tools:ignore="NotSibling" />
+
+                            <androidx.appcompat.widget.AppCompatToggleButton
+                                android:id="@+id/fetchur_toggle"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+
+                                android:layout_centerInParent="true"
+                                android:layout_marginRight="10sp"
+                                android:backgroundTint="@color/colorPrimaryDark"
+                                android:checked="true"
+                                android:fontFamily="@font/bariol_bold"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                app:icon="@drawable/baseline_key_24"
+                                app:iconTint="@color/white" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/event_notification"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/fetchur_today">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+
+                        app:cardUseCompatPadding="true"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?selectableItemBackground"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:gravity="center">
+                            <TextView
+                                android:id="@+id/text5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/normalPadding"
+                                android:layout_marginTop="5sp"
+                                android:layout_marginRight="@dimen/normalPadding"
+
+
+                                android:fontFamily="@font/bariol_bold"
+                                android:text="Skyblock Updates"
+                                android:textColor="@color/darkTextColor"
+                                android:textSize="@dimen/title"
+                                tools:ignore="SpUsage,TextSizeCheck" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/normalPadding"
+                                android:layout_marginBottom="5sp"
+
+
+                                android:layout_below="@id/text5"
+
+                                android:fontFamily="@font/bariol_bold"
+
+                                android:text="Get a list of recent updates and fixes."
+                                android:textColor="#90212121"
+                                android:textSize="12sp" />
+
+                            <androidx.appcompat.widget.AppCompatToggleButton
+                                android:id="@+id/SBUpdates_toggle"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+
+                                android:layout_centerInParent="true"
+                                android:layout_marginRight="10sp"
+                                android:backgroundTint="@color/colorPrimaryDark"
+                                android:checked="true"
+                                android:fontFamily="@font/bariol_bold"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                app:icon="@drawable/baseline_key_24"
+                                app:iconTint="@color/white" />
+
+                        </RelativeLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>
+
+
+
